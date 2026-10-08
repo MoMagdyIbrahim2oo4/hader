@@ -55,9 +55,7 @@ class CustomOnboardingPage extends StatelessWidget {
             borderRadius: BorderRadius.circular(12.r),
           ),
           padding: EdgeInsets.all(14.h),
-          child: Directionality(
-            textDirection: TextDirection.rtl, // لضبط الأيقونة على اليمين والنص على الشمال
-            child: WhatsNewFeature(
+          child: WhatsNewFeature(
               icon: SvgPicture.asset(
                 feature.iconPath,
                 width: 28.83.w,
@@ -71,7 +69,6 @@ class CustomOnboardingPage extends StatelessWidget {
                 feature.description,
                 style: Theme.of(context).textTheme.bodySmall,
               ),
-            ),
           ),
         );
       }).toList(),

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:hader/core/constants/app_images.dart';
 import '../../../../core/constants/app_icons.dart';
@@ -14,7 +15,7 @@ class OnboardingScreen extends StatelessWidget {
     return Scaffold(
       body: CupertinoOnboarding(
         bottomButtonChild: Text(
-          'التالي',
+          'next'.tr(),
           style: Theme.of(context).textTheme.displayMedium,
         ),
         bottomButtonColor: Theme.of(context).hoverColor,
@@ -25,65 +26,61 @@ class OnboardingScreen extends StatelessWidget {
         pages: [
           CustomOnboardingPage(
             imagePath: AppImages.onboarding1,
-            titleText: "حاضر — في موعدك وبكل دقة",
-            descriptionText: "منظومة إثبات الحضور الذكية بأحدث تقنيات السياج الجغرافي المشفر والرموز المتغيرة تلقائياً لمنع أي تلاعب.",
+            titleText: "onboarding1_title".tr(),
+            descriptionText: "onboarding1_description".tr(),
             features: [
               OnboardingFeatureModel(
                 iconPath: AppIcons.onboarding1icon1,
-                title: "تحضير فوري في نطاق يصل لـ 50 متراً",
-                description: "تسجيل الدخول تلقائياً عند عبور بوابة المقر دون الحاجة للبصمات اليدوية أو الانتظار في طوابير.",
+                title: "onboarding1_feature1_title".tr(),
+                description: "onboarding1_feature1_description".tr(),
               ),
               OnboardingFeatureModel(
                 iconPath: AppIcons.onboarding1icon2,
-                title: "مستشعرات ذكية iBeacon",
-                description: "تطابق فائق للحضور داخل الطوابق المغلقة والمكاتب حتى مع انعدام إشارة الأقمار الصناعية (GPS).",
+                title: "onboarding1_feature2_title".tr(),
+                description: "onboarding1_feature2_description".tr(),
               ),
             ],
           ),
           CustomOnboardingPage(
             imagePath: AppImages.onboarding2,
-            titleText: "أمان متكامل ومكافحة التلاعب",
-            descriptionText: """نظام مشفر يربط حسابك بهاتفك المعتمد ورموز
-              الديناميكية المتغير QR""",
+            titleText: "onboarding2_title".tr(),
+            descriptionText: "onboarding2_description".tr(),
             features: [
               OnboardingFeatureModel(
                 iconPath: AppIcons.onboarding2icon1,
-                title: "حماية وتدقيق الموقع الجغرافي",
-                description: """منع برامج تزييف الموقع كلياً (No Mock GPS / VPN
-Protected) لضمان التواجد الفعلي داخل النطاق.""",
+                title: "onboarding2_feature1_title".tr(),
+                description: "onboarding2_feature1_description".tr(),
               ),
               OnboardingFeatureModel(
                 iconPath: AppIcons.onboarding2icon2,
-                title: "ربط المعرّف الفريد للجهاز",
-                description: """قفل الحساب بمعرف الجهاز (Device ID Binding)
-لمنع تسجيل الحضور بالنيابة أو من أجهزة بديلة."""),
+                title: "onboarding2_feature2_title".tr(),
+                description: "onboarding2_feature2_description".tr()),
               OnboardingFeatureModel(
                   iconPath: AppIcons.onboarding2icon3,
-                  title: "رموز QR ديناميكية متغيرة",
-                  description: """رمز مشفر يتجدد كل 15 ثانية لمنع تصوير الشاشة
-أو تداول الرموز بين الموظفين."""),
+                  title: "onboarding2_feature3_title".tr(),
+                  description: "onboarding2_feature3_description".tr()),
 
             ],
           ),
           CustomOnboardingPage(
             imagePath: AppImages.onboarding3,
-            titleText: "إدارتك الذاتية في مكان واحد",
-            descriptionText: "متابعة الراتب، طلبات الإجازات والاستئذان، والتقويم التفاعلي بلمسة واحدة",
+            titleText: "onboarding3_title".tr(),
+            descriptionText: "onboarding3_description".tr(),
             features: [
               OnboardingFeatureModel(
                 iconPath: AppIcons.onboarding3icon1,
-                title: "كشف وتفصيل الراتب اللحظيً",
-                description: "احتساب فوري للساعات الإضافية والبدلات",
+                title: "onboarding3_feature1_title".tr(),
+                description: "onboarding3_feature1_description".tr(),
               ),
               OnboardingFeatureModel(
                 iconPath: AppIcons.onboarding3icon2,
-                title: "تقديم ومتابعة الإجازات والأذوناتً",
-                description: "إشعارات فورية باعتماد المدير المباشر والإدارة",
+                title: "onboarding3_feature2_title".tr(),
+                description: "onboarding3_feature2_description".tr(),
               ),
               OnboardingFeatureModel(
                 iconPath: AppIcons.onboarding3icon3,
-                title: "مزامنة سحابية آمنة ومشفرةً",
-                description: "ربط مباشر مع أنظمة الموارد البشرية المركزية",
+                title: "onboarding3_feature3_title".tr(),
+                description: "onboarding3_feature3_description".tr(),
               ),
 
             ],
