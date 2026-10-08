@@ -10,10 +10,15 @@ class LightTheme {
       bodyMedium: AppTextStyles.cairoBold24DarkNavy,
       bodySmall: AppTextStyles.tajawalRegular14DarkNavy,
       displayLarge: AppTextStyles.tajawalRegular16DarkCoolGray,
+      displayMedium: AppTextStyles.cairoBold18White,
     ),
     cardColor: AppColors.lightBlue,
     canvasColor: AppColors.teelGreen,
     colorSchemeSeed: AppColors.pastalBlue,
-    shadowColor: AppColors.darkGreen
+    shadowColor: AppColors.darkGreen,
+    hoverColor: AppColors.blackNigga,
+    focusColor: AppColors.white,
+
+
   );
 }
