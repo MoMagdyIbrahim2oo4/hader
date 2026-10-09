@@ -2,10 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_screenutil_plus/flutter_screenutil_plus.dart';
 import 'package:hader/core/constants/app_images.dart';
+import 'package:hader/core/router/app_routes.dart';
+import 'package:hader/core/sources/shared_pref.dart';
 import '../../../../core/constants/app_icons.dart';
-import '../../core/screen shape/custom_onboarding_page.dart';
-import '../../core/screen shape/onboarding_feature_model.dart';
-import '../../packages/onboarding_packages/cupertino_onboarding.dart';
+import '../core/screen shape/custom_onboarding_page.dart';
+import '../core/screen shape/onboarding_feature_model.dart';
+import '../packages/onboarding_packages/cupertino_onboarding.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -19,9 +21,14 @@ class OnboardingScreen extends StatelessWidget {
           style: Theme.of(context).textTheme.displayMedium,
         ),
         bottomButtonColor: Theme.of(context).hoverColor,
-        bottomButtonPadding: EdgeInsets.only(bottom: 10.h, left: 22.w, right: 22.w),
+        bottomButtonPadding: EdgeInsets.only(
+          bottom: 10.h,
+          left: 22.w,
+          right: 22.w,
+        ),
         onPressedOnLastPage: () {
-          // signin page!!!!!!!!!
+          SharedPref.setSeen();
+          Navigator.of(context).pushNamed(AppRoutes.hostOrEmployee);
         },
         pages: [
           CustomOnboardingPage(
@@ -54,12 +61,13 @@ class OnboardingScreen extends StatelessWidget {
               OnboardingFeatureModel(
                 iconPath: AppIcons.onboarding2icon2,
                 title: "onboarding2_feature2_title".tr(),
-                description: "onboarding2_feature2_description".tr()),
+                description: "onboarding2_feature2_description".tr(),
+              ),
               OnboardingFeatureModel(
-                  iconPath: AppIcons.onboarding2icon3,
-                  title: "onboarding2_feature3_title".tr(),
-                  description: "onboarding2_feature3_description".tr()),
-
+                iconPath: AppIcons.onboarding2icon3,
+                title: "onboarding2_feature3_title".tr(),
+                description: "onboarding2_feature3_description".tr(),
+              ),
             ],
           ),
           CustomOnboardingPage(
@@ -82,10 +90,8 @@ class OnboardingScreen extends StatelessWidget {
                 title: "onboarding3_feature3_title".tr(),
                 description: "onboarding3_feature3_description".tr(),
               ),
-
             ],
           ),
-
         ],
       ),
     );
